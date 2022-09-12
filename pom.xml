@@ -36,6 +36,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--Spring Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!--validation-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,17 +74,18 @@
             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
         </dependency>
 
-        <!--Spring Security -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
 
         <!--Spring Data(jpa)-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--JDBC-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+            <version>2.7.3</version>
         </dependency>
 
         <!--h2database-->
@@ -89,38 +96,38 @@
         </dependency>
 
         <!--Mysql-->
-        <dependency>
+       <!-- <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
 
         <!--mssql-->
-        <dependency>
+        <!--<dependency>
               <groupId>com.microsoft.sqlserver</groupId>
               <artifactId>mssql-jdbc</artifactId>
               <scope>runtime</scope>
-          </dependency>
+          </dependency>-->
 
         <!--oracle-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.oracle.database.jdbc</groupId>
             <artifactId>ojdbc8</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
         <!--mariadb-->
-          <dependency>
+          <!--<dependency>
               <groupId>org.mariadb.jdbc</groupId>
               <artifactId>mariadb-java-client</artifactId>
               <scope>runtime</scope>
-          </dependency>
+          </dependency>-->
 
         <!--postgresql-->
-         <dependency>
+         <!--<dependency>
              <groupId>org.postgresql</groupId>
              <artifactId>postgresql</artifactId>
              <scope>runtime</scope>
-         </dependency>
+         </dependency>-->
 
         <!--Junit Test-->
         <dependency>
