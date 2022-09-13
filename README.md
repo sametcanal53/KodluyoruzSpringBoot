@@ -1,24 +1,43 @@
 # Kodluyoruz
-- Java 17
+- Java 18
+- Spring Framework
 - Spring Boot
 - Spring MVC
 - Spring Data
+- Spring Rest (Http Status)
 - Spring Security
-- Spring Rest
 
+
+## System Login
+> Register
+> <br>
+> Login (username+password)
+> <br>
+> Authorization (JWT)
 ## Steps
+> Spring Framework
+> <br>
+> Spring Boot
+> <br>
 > Spring MVC
+> <br>
+> Spring Data (JPA Hibernate)
+> <br>
+> Spring Rest (Restful)
+> <br>
+> Spring Security
 
 
 ### Reference Documentation
 * [Github](https://github.com/sametcanal53/KodluyoruzSpringBoot)
+* [H2 Console](http://localhost:8080/h2-console/)
+* [Swagger](http://localhost:8080/swagger-ui.html)
 
 ```sh
 docker
 ```
 
-* [H2 Console](http://localhost:8080/h2-console/)
-* [Swagger](http://localhost:8080/swagger-ui.html)
+
 ## Docker Deployment
 ```sh
 1.ADIM
