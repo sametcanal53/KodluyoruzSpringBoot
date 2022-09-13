@@ -88,11 +88,11 @@ public class ThymeleafController {
     // @PathVariable
     // http://localhost:8080/thymeleaf7/11
     // http://localhost:8080/thymeleaf7/
-    @GetMapping({"/thymeleaf7/{id}","/thymeleaf7/"})
-    public String getThymeleaf7Model(Model model, @PathVariable(name = "id",required = false) Long id) {
-        if(id!=null){
-            model.addAttribute("key_model1", "id : "+id);
-        }else{
+    @GetMapping({"/thymeleaf7/{id}", "/thymeleaf7/"})
+    public String getThymeleaf7Model(Model model, @PathVariable(name = "id", required = false) Long id) {
+        if (id != null) {
+            model.addAttribute("key_model1", "id : " + id);
+        } else {
             model.addAttribute("key_model1", "id bulunamadı ");
         }
         return "thymeleaf7";
@@ -101,8 +101,8 @@ public class ThymeleafController {
     // @RequestParam
     // http://localhost:8080/thymeleaf8/?id=4&name=SametcanAL
     @GetMapping("/thymeleaf8/")
-    public String getThymeleaf8Model(Model model, @RequestParam(name = "id") Long id,@RequestParam(name="name") String ad) {
-        model.addAttribute("key_model1", "id : "+id+" adi soyadi : "+ad);
+    public String getThymeleaf8Model(Model model, @RequestParam(name = "id") Long id, @RequestParam(name = "name") String ad) {
+        model.addAttribute("key_model1", "id : " + id + " adi soyadi : " + ad);
 
         return "thymeleaf8";
     }

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Templates</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="container bg-dark text-white">
+<!--start-code-->
+<p th:text="#{register}" class="display-3 text-uppercase text-center text-primary bordered mt-5"></p>
+
+<form th:method="post" th:action="@{/form}" th:object="${cv_teacher}">
+    <div class="row">
+        <div class="col-md-2 mb-4">
+            <label th:text="#{nameandsurname}" for="name_surname" class="text-capitalize text-muted"></label>
+        </div>
+        <div class="col-md-10">
+            <input th:field="*{teacherFullName}" type="text" class="form-control" placeholder="Adınız ve Soyadınız"
+                   id="name_surname" name="name_surname"
+                   autofocus>
+            <p class="text-danger" th:if="${#fields.hasErrors('teacherFullName')}" th:errors="*{teacherFullName}"></p>
+        </div>
+
+        <div class="col-md-2 mb-4">
+            <label th:text="#{email}" for="email" class="text-capitalize text-muted"></label>
+        </div>
+        <div class="col-md-10">
+            <input th:field="*{teacherEmail}" type="email" class="form-control" placeholder="Email" id="email"
+                   name="email">
+            <p class="text-danger" th:if="${#fields.hasErrors('teacherEmail')}" th:errors="*{teacherEmail}"></p>
+        </div>
+        <div class="col-md-2 mb-4">
+            <label th:text="#{password}" for="password" class="text-capitalize text-muted"></label>
+        </div>
+        <div class="col-md-10">
+            <input th:field="*{teacherPassword}" type="password" class="form-control" placeholder="Şifreniz"
+                   id="password" name="password">
+            <p class="text-danger" th:if="${#fields.hasErrors('teacherPassword')}" th:errors="*{teacherPassword}"></p>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-10">
+            <button th:text="#{clear}" type="reset" class="btn btn-danger"></button>
+            <button th:text="#{submit}" type="submit" class="btn btn-primary"/>
+        </div>
+
+    </div>
+</form>
+
+<!-- end-code-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
