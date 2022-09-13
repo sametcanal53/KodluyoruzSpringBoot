@@ -4,6 +4,7 @@ import com.sametcanal.dto.ProductDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
@@ -12,6 +13,11 @@ import java.util.List;
 @Controller
 public class ThymeleafController {
 
+    // http://localhost:8080/
+    @GetMapping({"/", "index"})
+    public String index() {
+        return "index";
+    }
 
     // http://localhost:8080/thymeleaf1
     @GetMapping("/thymeleaf1")
@@ -52,13 +58,13 @@ public class ThymeleafController {
         model.addAttribute("key_model1", "text");
 
         ProductDto productDto = ProductDto
-                                    .builder()
-                                    .productId(0L)
-                                    .productName("Ürün Adı")
-                                    .productPrice(2500)
-                                    .build();
+                .builder()
+                .productId(0L)
+                .productName("Ürün Adı")
+                .productPrice(2500)
+                .build();
 
-        model.addAttribute("key_model2",productDto);
+        model.addAttribute("key_model2", productDto);
         return "thymeleaf5";
     }
 
@@ -73,8 +79,21 @@ public class ThymeleafController {
         list.add(ProductDto.builder().productId(3L).productName("Ürün Adı 3").productPrice(3500).build());
         list.add(ProductDto.builder().productId(4L).productName("Ürün Adı 4").productPrice(4500).build());
 
-        model.addAttribute("product_list",list);
+        model.addAttribute("product_list", list);
         return "thymeleaf6";
+    }
+
+
+    // Model Object göndermek
+    // http://localhost:8080/thymeleaf7/11
+    @GetMapping({"/thymeleaf7/{id}","/thymeleaf7/"})
+    public String getThymeleaf7Model(Model model, @PathVariable(name = "id",required = false) Long id) {
+        if(id!=null){
+            model.addAttribute("key_model1", "id : "+id);
+        }else{
+            model.addAttribute("key_model1", "id bulunamadı ");
+        }
+        return "thymeleaf7";
     }
 
 }
