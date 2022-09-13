@@ -1,6 +1,6 @@
-package com.sametcanal.bean;
+package com.sametcanal.tutorials.bean;
 
-import com.sametcanal.dto.BeanDto;
+import com.sametcanal.tutorials.dto.BeanDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;

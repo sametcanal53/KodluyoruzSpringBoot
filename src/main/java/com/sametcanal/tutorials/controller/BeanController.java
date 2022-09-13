@@ -1,6 +1,6 @@
-package com.sametcanal.controller;
+package com.sametcanal.tutorials.controller;
 
-import com.sametcanal.bean.BeanConfig;
+import com.sametcanal.tutorials.bean.BeanConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

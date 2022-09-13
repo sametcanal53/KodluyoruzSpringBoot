@@ -1,6 +1,6 @@
-package com.sametcanal.controller;
+package com.sametcanal.tutorials.controller;
 
-import com.sametcanal.dto.TeacherDto;
+import com.sametcanal.tutorials.dto.TeacherDto;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

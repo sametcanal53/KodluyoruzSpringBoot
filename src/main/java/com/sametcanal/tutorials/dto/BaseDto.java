@@ -1,4 +1,4 @@
-package com.sametcanal.dto;
+package com.sametcanal.tutorials.dto;
 
 import java.util.Date;
 

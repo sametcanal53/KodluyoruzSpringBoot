@@ -1,4 +1,4 @@
-package com.sametcanal.bean;
+package com.sametcanal.tutorials.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
