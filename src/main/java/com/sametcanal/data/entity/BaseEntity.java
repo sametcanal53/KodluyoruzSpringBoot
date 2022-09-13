@@ -1,4 +1,4 @@
-package com.sametcanal.entity;
+package com.sametcanal.data.entity;
 
 import lombok.Getter;
 import lombok.Setter;

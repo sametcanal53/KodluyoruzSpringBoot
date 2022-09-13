@@ -1,4 +1,4 @@
-package com.sametcanal.dto;
+package com.sametcanal.business.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
